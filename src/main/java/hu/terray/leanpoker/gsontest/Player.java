@@ -13,13 +13,11 @@ public class Player {
 
         // Get value based on key from root level
         String smallBlind = rootObject.get("small_blind").getAsString();
-        System.out.println(smallBlind);
 
         // Get object (array/object) from the root level based on key
         JsonArray playersArrayChildObject = rootObject.getAsJsonArray("players"); // get place object
         JsonObject firstPlayer = playersArrayChildObject.get(0).getAsJsonObject();
         int firstPlayerStack = firstPlayer.get("stack").getAsInt();
-        System.out.println(firstPlayerStack);
 
         return 0;
     }
